@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        min-width: 357px;
+        overflow-x: hidden;
+      }
+      li{
+        list-style: none;
+      }
+      img {
+        margin: 5px;
+        border: 2px solid black;
+        vertical-align: middle;
+        width: 200px;
+        height: 75px;
+      }
+      .content ul li {
+        float: left;
+        list-style: none;
+      }
+      li span {
+        float: left;
+        margin-right: 10px;
+        width: 100px;
+      }
+      input{
+        height: 20px;
+        margin-bottom: 10px;
+        background-color: yellow;
+      }
+      button{
+        margin-bottom: 20px;
+        background-color: red;  
+        width: 100px;
+        height: 30px;
+      }
+      textarea{
+        background-color: green;
+        color: white;
+      }
+    </style>
+    
+    <script src = '/static/js/jQuery.js'></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <li><span>选择器值:</span><input type="text" name="querySelector" id="querySelector" autofocus="autofocus"/><br /></li>
+    <li><span>是否获取标题:</span><input type="text" name="getTitle" id="getTitle" value="1"/><br /></li>
+    <li><span>是否获取链接地址:</span><input type="text" name="getUrl" id="getUrl" /><br /></li>
+    <button type="button"  id="startQuery">点击进行爬虫</button><br />
+    <button type="button"  id="closeBookMark">隐藏书签栏</button><button type="button"  id="showBookMark">显示书签栏</button><br />
+    <textarea id="queryResult" style="display: none;">
+    </textarea>
+    
+  </body>
+</html>
