@@ -3,58 +3,44 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
     <title>Getting Started Extension's Popup</title>
-    <style>
-      body {
-        min-width: 357px;
-        overflow-x: hidden;
-      }
-      li{
-        list-style: none;
-      }
-      img {
-        margin: 5px;
-        border: 2px solid black;
-        vertical-align: middle;
-        width: 200px;
-        height: 75px;
-      }
-      .content ul li {
-        float: left;
-        list-style: none;
-      }
-      li span {
-        float: left;
-        margin-right: 10px;
-        width: 100px;
-      }
-      input{
-        height: 20px;
-        margin-bottom: 10px;
-        background-color: yellow;
-      }
-      button{
-        margin-bottom: 20px;
-        background-color: red;  
-        width: 100px;
-        height: 30px;
-      }
-      textarea{
-        background-color: green;
-        color: white;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/static/popup.css">
     
     <script src = '/static/js/jQuery.js'></script>
     <script src="popup.js"></script>
   </head>
   <body>
-    <li><span>选择器值:</span><input type="text" name="querySelector" id="querySelector" autofocus="autofocus"/><br /></li>
-    <li><span>是否获取标题:</span><input type="text" name="getTitle" id="getTitle" value="1"/><br /></li>
-    <li><span>是否获取链接地址:</span><input type="text" name="getUrl" id="getUrl" /><br /></li>
-    <button type="button"  id="startQuery">点击进行爬虫</button><br />
-    <button type="button"  id="closeBookMark">隐藏书签栏</button><button type="button"  id="showBookMark">显示书签栏</button><br />
-    <textarea id="queryResult" style="display: none;">
-    </textarea>
+    <div class="btn">
+      <button type="button" class="btn-ctr" id="spider-ctr"><span>展开</span><i>爬虫</i>操作</button><br />
+      <button type="button" class="btn-ctr" id="bookMark-ctr"><span>展开</span><i>书签</i>操作</button><br />
+      <button type="button" class="btn-ctr" id="deleteAd-ctr"><span>展开</span><i>广告</i>操作</button><br />
+    </div>
+    <div class = "ctrl-btn ctrl-btn-spider">
+      <ul class="spider-list">
+        <li><span>选择器值:</span><input type="text" name="querySelector" id="querySelector" autofocus="autofocus"/><br /></li>
+        <li><span>是否获取标题:</span><input type="text" name="getTitle" id="getTitle" value="1"/><br /></li>
+        <li><span>是否获取链接地址:</span><input type="text" name="getUrl" id="getUrl" /><br /></li>
+      </ul>
+      <button type="button"  id="startQuery" class="btn-ing">点击进行爬虫</button><br />
+      <textarea id="queryResult" style="display: none;">
+      </textarea>
+    </div>
+
+    <div class="ctrl-btn ctrl-btn-bookMark">
+      <ul class="bookMark-list">
+        <li><button type="button"  id="closeBookMark">隐藏书签栏</button></li>
+        <li><button type="button"  id="showBookMark">显示书签栏</button></li>
+    </div>
+
+    <div class = "ctrl-btn ctrl-btn-deleteAd">
+      <ul class="deleteAd-list">
+        <li class="id_input"><input type="text" name="id-input" /><br /></li>
+        <li class="class_input"><input type="text" name="class-input" /><br /></li>
+        <li class="src_input"><input type="text" name="src-input"/><br /></li>
+      </ul>
+      <p class="ad-show"></p>
+      <button type="button"  id="startDeleteAd" class="btn-ing">手动删除广告</button><br />
+    </div>
+    
     
   </body>
 </html>

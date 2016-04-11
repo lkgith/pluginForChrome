@@ -1,0 +1,81 @@
+body {
+  min-width: 357px;
+  overflow-x: hidden;
+  background-color: #F5CADE;
+}
+li{
+  list-style: none;
+}
+img {
+  margin: 5px;
+  border: 2px solid black;
+  vertical-align: middle;
+  width: 200px;
+  height: 75px;
+}
+.content ul li {
+  float: left;
+  list-style: none;
+}
+li span {
+  float: left;
+  margin-right: 10px;
+  width: 100px;
+}
+input{
+  height: 20px;
+  margin-bottom: 10px;
+  background-color: yellow;
+}
+button{
+  margin-bottom: 20px;
+  background-color: #00D0FF;  
+  width: 100px;
+  height: 30px;
+}
+textarea{
+  background-color: green;
+  color: white;
+  margin-left: 40px;
+}
+li:before{
+  display:inline-block;
+  width:100px;
+  height:14px;
+  margin-right: 10px;
+}
+.id_input:before{
+  content:'id值:';
+}
+.class_input::before{
+  content:'class值:';
+}
+.src_input::before{
+  content:'src或者href值:';
+}
+.ctrl-btn{
+  display:none;
+}
+.btn-ing{
+  margin-left: 40px;
+  background-color: #1000FF;
+  color: #fff;
+}
+.bookMark-list li{
+  float: left;
+  margin-right: 20px;
+}
+.bookMark-list li button{
+  background-color: #1000FF;
+  color: #fff;
+}
+.ad-show{
+  display: none;
+  margin-left: 40px;
+  color: red;
+  font-size: 20px;
+}
+.delete-current{
+  display: block;
+}
+

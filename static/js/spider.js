@@ -1,3 +1,8 @@
+/* 爬虫
+* 根据配置的class和id进行爬虫
+* author lvkunjie
+*/
+
 chrome.extension.onRequest.addListener(
   function(request, sender, sendResponse){
     var querySelector = request.queryName;
@@ -12,4 +17,4 @@ chrome.extension.onRequest.addListener(
       titleStr = titleStr + result +'_______';
     }
     sendResponse({result:titleStr});
-});//绑定扩展通知
+});// 绑定扩展通知
